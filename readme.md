@@ -1,4 +1,4 @@
-#Daily-Puzzle
+# Daily-Puzzle
 A simple python script to run every 24hrs to send a mail containing a puzzle to recipients.
 I have deployed the code on heroku using heroku CLI.
 
