@@ -2,7 +2,7 @@
 2. login :
 	heroko login -i
 3. connect to heroku : 
-	heroku git:remote -a daily-puzzle2
+	heroku git:remote -a app_name
 4. push to heroku 
 	git push heroku master
   ------------------------------------------------Once Deployed the script will run on its own---------------------------------------------
