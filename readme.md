@@ -7,18 +7,18 @@ I have deployed the code on heroku using heroku CLI.
 - run.py: This file contains the code that does web scraping and sending mail.
 - data.txt: This file stores the number of the next puzzle to send.
 
-**To deploy using heroku CLI : **
-- Go to directory ( If not initialized as a git repo : git init --> git add . --> git commit -m "commit message" )
-- Login to heroku Account
+**Steps to deploy using heroku CLI**
+- Go to the directory containing the files ( If not initialized as a git repo : git init --> git add . --> git commit -m "commit message" )
+- Login to your Heroku Account
 ```
 heroko login -i
 ```
-- Connect to heroku
+- Connect to Heroku
 ```
 heroku git:remote -a app_name
 ```
--push to heroku 
+-Push to Heroku 
 ```
 git push heroku master
 ```
-------------------------------------------------Once Deployed the script will run on its own---------------------------------------------
+------------------------------------------------Once Deployed the Script will run on its own---------------------------------------------
