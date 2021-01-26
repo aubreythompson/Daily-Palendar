@@ -21,4 +21,4 @@ heroku git:remote -a app_name
 ```
 git push heroku master
 ```
-------------------------------------------------Once Deployed the Script will run on its own---------------------------------------------
+-----------------------------------------Once Deployed the Script will run on its own---------------------------------------------
