@@ -8,4 +8,4 @@
   ------------------------------------------------Once Deployed the script will run on its own---------------------------------------------
 5. run app
    For python scripts(for testing only) :
-	heroku python run script_name.py
+	heroku run python script_name.py

@@ -79,4 +79,4 @@ if __name__=="__main__":
     while(True):
         print('Runnning\n')
         fun1()
-        time.sleep(86400)        #86400s in 1 day
+        time.sleep(43200)        #86400s in 1 day
