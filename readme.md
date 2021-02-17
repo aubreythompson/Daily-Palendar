@@ -1,5 +1,5 @@
 # Daily-Puzzle
-A simple python script to run every 24hrs to send a mail containing a puzzle to recipients.
+A simple python script using web scraping to send a mail containing a puzzle to recipients every 24 hrs.
 I have deployed the code on Heroku using Heroku CLI.
 
 
