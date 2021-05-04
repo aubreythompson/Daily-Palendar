@@ -4,6 +4,7 @@ I have deployed the code on Heroku using Heroku CLI.
 
 
 **Folder Structure:**
+- clock.py: This file schedules the app to run at specified regular intervals (eg : everyday at 10 am etc)
 - run.py: This file contains the code that does web scraping and sending mail.
 - data.txt: This file stores the number of the next puzzle to send.
 
