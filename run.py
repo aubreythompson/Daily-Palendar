@@ -39,10 +39,10 @@ def getLink(number):
 def fun1():
     smtp_server = "smtp.gmail.com"
     port = 587  # For starttls
-    sender_email = "kakarot3142@gmail.com"               #sender's mail id
-    receiver_email  = ['kakarot3142@gmail.com']        #list of reciever's mail ids
+    sender_email = "sender-mail-id"               #sender's mail id
+    receiver_email  = ['reciever-mail-id']        #list of reciever's mail ids
     #password = getpass.getpass(prompt="Type your password and press enter: ")
-    password = "deku@45%ofa"
+    password = "enter-your-password-here"
 
     print('Runnning\n')
     file1 = open("data.txt","r")  
