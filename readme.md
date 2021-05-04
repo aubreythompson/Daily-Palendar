@@ -15,7 +15,7 @@ I have deployed the code on Heroku using Heroku CLI.
 - Go to the directory containing the files ( If not initialized as a git repo : git init --> git add . --> git commit -m "commit message" )
 - Login to your Heroku Account
 ```
-heroko login -i
+heroku login -i
 ```
 - Connect to the App
 ```
