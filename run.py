@@ -39,10 +39,10 @@ def getLink(number):
 def fun1():
     smtp_server = "smtp.gmail.com"
     port = 587  # For starttls
-    sender_email = "sender@gmail.com"               #sender's mail id
-    receiver_email  = ['reciever@gmail.com']        #list of reciever's mail ids
+    sender_email = "kakarot3142@gmail.com"               #sender's mail id
+    receiver_email  = ['kakarot3142@gmail.com']        #list of reciever's mail ids
     #password = getpass.getpass(prompt="Type your password and press enter: ")
-    password = 'enter-senders-password-here'
+    password = "deku@45%ofa"
 
     print('Runnning\n')
     file1 = open("data.txt","r")  
@@ -69,14 +69,8 @@ def fun1():
         file1 = open("data.txt","w")  
         number = file1.write(str(int(number)+1)) 
         file1.close() 
-
     except Exception as e:
         # Print any error messages to stdout
         print(e)
-    finally:
-        server.quit() 
 if __name__=="__main__":
-    while(True):
-        print('Runnning\n')
-        fun1()
-        time.sleep(86400)        #86400s in 1 day
+    fun1()
