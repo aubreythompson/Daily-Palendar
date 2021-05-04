@@ -22,4 +22,9 @@ heroku git:remote -a app_name
 ```
 git push heroku master
 ```
+- Scale up the clock process 
+```
+heroku ps:scale clock=1
+```
+
 -----------------------------------------Once Deployed the Script will run on its own----------------------------------------
