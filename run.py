@@ -71,4 +71,4 @@ def sendMail():
         print(e)
 
 if __name__=="__main__":
-    fun1()
+    sendMail()
