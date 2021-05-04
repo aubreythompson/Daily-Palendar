@@ -33,7 +33,7 @@ def getLink(number):
         return ['No Links Found!!']
         raise()
 
-def fun1():
+def sendMail():
     smtp_server = "smtp.gmail.com"
     port = 587                                    # For starttls
     sender_email = "sender-mail-id"               #sender's mail id
