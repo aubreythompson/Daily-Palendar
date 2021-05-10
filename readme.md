@@ -1,6 +1,6 @@
 # Daily-Puzzle
 A simple python script using web scraping to send a mail containing a puzzle to recipients every 24 hrs.
-I have deployed the code on Heroku using Heroku CLI.
+I have deployed the code on Heroku using Heroku CLI. APScheduler runs the worker process at regular intervals (every 24 hours)
 
 
 **Folder Structure:**
@@ -9,6 +9,7 @@ I have deployed the code on Heroku using Heroku CLI.
 - data.txt: This file stores the number of the next puzzle to send.
 
 ### NOTE : If you decide to use a Gmail account to send your emails, you'll need to set 'Allow less secure apps' to ON. Be aware that this makes it easier for others to gain access to your account, so it will be better to use a throwaway account for development.
+
 
 
 **Steps to deploy using Heroku CLI**
