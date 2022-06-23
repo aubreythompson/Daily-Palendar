@@ -2,6 +2,44 @@ import smtplib, ssl
 import bs4,webbrowser
 import requests
 import time
+import csv
+import random
+from datetime import date
+
+
+def getGift(day,month,year):
+    with open('Calendar.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        dateHasGift = False
+        randomUnused = []
+        i=0
+        for row in reader:
+            if row[0] == str(month) + "/" + str(day):
+                dateHasGift = True            
+                return row
+            if row[0]=='':
+                randomUnused.append(row)
+                i+=1
+        if not dateHasGift:
+            #pick a random gift  
+            giftToPick = random.randint(0, i-1)
+            return randomUnused[giftToPick]
+            #write to date the date that it was used
+
+def getNumberOfLemons(day,month,year):
+    if month > 5:
+        twelveLemons = year - 2021
+        monthModMay = month
+    else:
+        twelveLemons = year - 2021 - 1
+        monthModMay = month +12
+
+    if day < 26:
+        monthModMay-=1
+    
+    howManyLemons = twelveLemons*12 + monthModMay - 5
+    return howManyLemons
+
 
 def getLink(number):
     link='https://www.google.com/search?q='+'geeksforgeeks puzzle '+number
@@ -42,14 +80,25 @@ def sendMail():
     password = "enter-your-password-here"
 
     print('Runnning\n')
-    file1 = open("data.txt","r")  
-    number = file1.read() 
-    file1.close() 
+    #file1 = open("data.txt","r")  
+    #number = file1.read() 
+    #file1.close() 
 
 
-    subject="Daily Puzzle {}".format(int(number))
-    puzzle_link=getLink(number)
-    text = 'Good morning! Here\'s your puzzle for today.\n '+puzzle_link[0]
+    today = date.today()
+    day = today.day
+    month = today.month
+    year = today.year
+
+    howManyLemons = getNumberOfLemons(day,month,year)
+    gift = getGift(day,month,year)
+
+    subject="Lemon Calendar {}".format(int(number))
+    #puzzle_link=getLink(number)
+    text = "🍋"*getNumberOfLemons(day,month,year)
+    text = '\nGood morning! "Today\'s gift is a', gift[1],':', gift[2]
+    if day == 26:
+        text = text + "\nIt's a lemon day! Happy ", howManyLemons, " lemons!"
     message = 'Subject: {}\n\n{}'.format(subject, text)
     
     # Create a secure SSL context
@@ -63,9 +112,9 @@ def sendMail():
         server.ehlo()                               
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
-        file1 = open("data.txt","w")  
-        number = file1.write(str(int(number)+1)) 
-        file1.close() 
+      #  file1 = open("data.txt","w")  
+       # number = file1.write(str(int(number)+1)) 
+        #file1.close() 
     
     except Exception as e:
         print(e)
