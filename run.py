@@ -8,7 +8,7 @@ from datetime import date
 
 
 def getGift(day,month,year):
-    with open('Calendar.csv', newline='') as csvfile:
+    with open('Calendar-test.csv', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         dateHasGift = False
         randomUnused = []
@@ -74,10 +74,10 @@ def getLink(number):
 def sendMail():
     smtp_server = "smtp.gmail.com"
     port = 587                                    # For starttls
-    sender_email = "sender-mail-id"               #sender's mail id
-    receiver_email  = ['reciever-mail-id']        #list of reciever's mail ids
+    sender_email = "tpalendar"               #sender's mail id
+    receiver_email  = ['aubreyannthompson']        #list of reciever's mail ids
     #password = getpass.getpass(prompt="Type your password and press enter: ")
-    password = "enter-your-password-here"
+    password = "QtXWj7QYn5y8zb"
 
     print('Runnning\n')
     #file1 = open("data.txt","r")  
