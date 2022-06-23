@@ -78,9 +78,8 @@ def sendMail():
     sender_email = "tpalendar"               #sender's mail id
     receiver_email  = ['aubreyannthompson']        #list of reciever's mail ids
     #password = getpass.getpass(prompt="Type your password and press enter: ")
-    password = "QtXWj7QYn5y8zb"
-
-    print('Runnning\n')
+    password = input("type-your-password-here ") 
+  #  print('Runnning\n')
     #file1 = open("data.txt","r")  
     #number = file1.read() 
     #file1.close() 
