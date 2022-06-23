@@ -1,3 +1,4 @@
+from collections.abc import MutableMapping
 from apscheduler.schedulers.blocking import BlockingScheduler
 from run import sendMail
 sched = BlockingScheduler()
