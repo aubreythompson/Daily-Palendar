@@ -40,7 +40,7 @@ def getNumberOfLemons(day,month,year):
     howManyLemons = twelveLemons*12 + monthModMay - 5
     return howManyLemons
 
-
+'''
 def getLink(number):
     link='https://www.google.com/search?q='+'geeksforgeeks puzzle '+number
     response=requests.get(link)
@@ -70,6 +70,7 @@ def getLink(number):
         print('Error')
         return ['No Links Found!!']
         raise()
+'''
 
 def sendMail():
     smtp_server = "smtp.gmail.com"
@@ -93,7 +94,7 @@ def sendMail():
     howManyLemons = getNumberOfLemons(day,month,year)
     gift = getGift(day,month,year)
 
-    subject="Lemon Calendar {}".format(int(number))
+    subject="Lemon Calendar"
     #puzzle_link=getLink(number)
     text = "🍋"*getNumberOfLemons(day,month,year)
     text = '\nGood morning! "Today\'s gift is a', gift[1],':', gift[2]

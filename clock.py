@@ -13,5 +13,5 @@ def timed_job():
 def scheduled_job():
     print('This job is run every weekday at 8 AM.')
     sendMail()
-sched.start()
 '''
+sched.start()
