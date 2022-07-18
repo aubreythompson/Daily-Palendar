@@ -1,3 +1,6 @@
+#WIP
+Using this code to help me figure out how to send daily "gifts" via email.
+
 # Daily-Puzzle
 A simple python script using web scraping to send a mail containing a puzzle to recipients every 24 hrs.
 I have deployed the code on Heroku using Heroku CLI. APScheduler runs the worker process at regular intervals (every 24 hours)
